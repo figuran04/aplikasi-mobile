@@ -1,0 +1,18 @@
+- download flutter stable
+https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.29.0-stable.zip
+ektrak di folder C
+menambah env di path C:\flutter\bin
+- download visual studio code (karena saya menggunakan windows)
+https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
+install vscode
+tambah ekstensi flutter dan dart
+flutter create FirstApp
+cd FirstApp
+flutter run
+pilih Edge atau Chrome
+
+- download git (karena saya menggunakan windows)
+https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe
+install git
+
+https://git-scm.com/downloads

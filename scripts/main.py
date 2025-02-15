@@ -9,35 +9,29 @@ def fetch_medium_posts(feed_url, num_posts=10, category_filter='mobile'):
     posts = []
 
     for entry in feed.entries:
-        # Memeriksa apakah artikel memiliki tag yang sesuai dengan kategori yang diinginkan
         categories = [tag.term for tag in entry.tags] if 'tags' in entry else []
         if category_filter not in categories:
-            continue  # Jika kategori tidak sesuai, skip entri ini
+            continue
         
         title = entry.title
         link = entry.link
 
-        # Mengambil summary dengan BeautifulSoup
         summary_html = entry.summary
         soup = BeautifulSoup(summary_html, 'html.parser')
 
-        # Menyaring img tag dan mengambil src
         img_tag = soup.find('img')
         image_url = img_tag['src'] if img_tag else None
 
-        # Mengambil summary dengan maksimal 140 karakter
         summary = soup.get_text()[:100] + '...' if len(soup.get_text()) > 100 else soup.get_text()
 
         posts.append((title, link, image_url, summary))
 
-        # Membatasi jumlah artikel sesuai dengan num_posts
         if len(posts) >= num_posts:
             break
 
     return posts
 
 def update_readme(posts):
-    # Read the existing README content
     with open('README.md', 'r') as f:
         readme_content = f.readlines()
 
