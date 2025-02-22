@@ -87,6 +87,7 @@ def create_post_image(post_data, index):
 if __name__ == "__main__":
     posts = [
         ("https://medium.com/@dikaelsaputra/instalasi-flutter-di-windows-758eb1830828?source=rss-272e0aace4a6------2", 'pertemuan-lainnya/README.md'),
+        ("https://medium.com/@dikaelsaputra/instalasi-android-studio-di-windows-89c66a7fb97e?source=rss-272e0aace4a6------2", 'pertemuan-1/README.md')
         ]
     
     for post_link, readme_path in posts:
