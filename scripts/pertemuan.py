@@ -89,7 +89,8 @@ if __name__ == "__main__":
         ("https://medium.com/@dikaelsaputra/instalasi-flutter-di-windows-758eb1830828?source=rss-272e0aace4a6------2", 'pertemuan-lainnya/README.md'),
         ("https://medium.com/@dikaelsaputra/instalasi-android-studio-di-windows-89c66a7fb97e?source=rss-272e0aace4a6------2", 'pertemuan-1/README.md'),
         ("https://medium.com/@dikaelsaputra/arsitektur-android-eb07231e3546?source=rss-272e0aace4a6------2", 'pertemuan-2/README.md'),
-        ("https://medium.com/@dikaelsaputra/instalasi-figma-alat-desain-ui-ux-d2d3e5bade78?source=rss-272e0aace4a6------2", 'pertemuan-3/README.md')
+        ("https://medium.com/@dikaelsaputra/instalasi-figma-alat-desain-ui-ux-d2d3e5bade78?source=rss-272e0aace4a6------2", 'pertemuan-3/README.md'),
+        ("https://medium.com/@dikaelsaputra/desain-ui-aplikasi-android-di-android-studio-9d8edc4abec5?source=rss-272e0aace4a6------2", 'pertemuan-4/README.md')
         ]
     
     for post_link, readme_path in posts:
