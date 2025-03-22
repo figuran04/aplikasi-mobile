@@ -1,11 +1,12 @@
 import feedparser
-from html import escape, unescape
+from html import unescape
 import os
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 
+# URL RSS feed Medium
 FEED_URL = "https://medium.com/feed/@dikaelsaputra"
 output_folder = "assets"
 os.makedirs(output_folder, exist_ok=True)
@@ -15,17 +16,23 @@ def fetch_medium_post_summary(feed_url, post_link):
     
     for entry in feed.entries:
         if entry.link == post_link:
-            summary = entry.summary
-            return summary
+            return entry.summary  # Mengembalikan summary jika ditemukan
 
-    return "Summary not found."
+    return None  # Mengembalikan None jika summary tidak ditemukan
 
 def update_readme(summary, readme_path, post_link):
+    if summary is None:
+        print(f"Skipping update for {readme_path} as summary is not found.")
+        return  # Tidak mengubah README jika summary tidak ditemukan
+
+    # Unescape HTML entities in the summary
     summary = unescape(summary)
 
+    # Baca isi README yang ada
     with open(readme_path, 'r', encoding='utf-8') as f:
         readme_content = f.readlines()
 
+    # Menandai bagian yang perlu diperbarui
     start_marker = "<!--START_SECTION:medium-->"
     end_marker = "<!--END_SECTION:medium-->"
     start_idx = None
@@ -37,23 +44,30 @@ def update_readme(summary, readme_path, post_link):
         if end_marker in line:
             end_idx = idx
 
+    # Menyiapkan konten baru
     new_content = f'[Baca di Medium]({post_link})\n\n{summary}\n'
 
+    # Hanya memperbarui jika marker ditemukan
     if start_idx is not None and end_idx is not None:
         updated_content = readme_content[:start_idx + 1] + [new_content] + readme_content[end_idx:]
 
+        # Simpan kembali isi README yang telah diperbarui
         with open(readme_path, 'w', encoding='utf-8') as f:
             f.writelines(updated_content)
 
 def fetch_post_data(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
+
     thumbnail_url = soup.find('meta', {'property': 'og:image'})
     thumbnail_url = thumbnail_url['content'] if thumbnail_url else None
+
     publish_date = soup.find('span', {'data-testid': 'storyPublishDate'})
     publish = publish_date.text.strip() if publish_date else '0'
+
     readers_count = soup.find('span', {'data-testid': 'storyReadTime'})
     readers = readers_count.text.strip() if readers_count else '0'
+
     return thumbnail_url, publish, readers
 
 def create_post_image(post_data, index):
@@ -87,10 +101,10 @@ def create_post_image(post_data, index):
 if __name__ == "__main__":
     posts = [
         ("https://medium.com/@dikaelsaputra/instalasi-flutter-di-windows-758eb1830828?source=rss-272e0aace4a6------2", 'pertemuan-lainnya/README.md'),
-        ("https://medium.com/@dikaelsaputra/instalasi-android-studio-di-windows-89c66a7fb97e?source=rss-272e0aace4a6------2", 'pertemuan-1/README.md'),
-        ("https://medium.com/@dikaelsaputra/arsitektur-android-eb07231e3546?source=rss-272e0aace4a6------2", 'pertemuan-2/README.md'),
-        ("https://medium.com/@dikaelsaputra/instalasi-figma-alat-desain-ui-ux-d2d3e5bade78?source=rss-272e0aace4a6------2", 'pertemuan-3/README.md'),
-        ("https://medium.com/@dikaelsaputra/desain-ui-aplikasi-android-di-android-studio-9d8edc4abec5?source=rss-272e0aace4a6------2", 'pertemuan-4/README.md')
+        ("https://medium.com/@dikaelsaputra/instalasi-android-studio-di-windows-89c66a7fb97e?source=rss-272e0aace4a6------2", 'pertemuan-01/README.md'),
+        ("https://medium.com/@dikaelsaputra/arsitektur-android-eb07231e3546?source=rss-272e0aace4a6------2", 'pertemuan-02/README.md'),
+        ("https://medium.com/@dikaelsaputra/instalasi-figma-alat-desain-ui-ux-d2d3e5bade78?source=rss-272e0aace4a6------2", 'pertemuan-03/README.md'),
+        ("https://medium.com/@dikaelsaputra/desain-ui-aplikasi-android-di-android-studio-9d8edc4abec5?source=rss-272e0aace4a6------2", 'pertemuan-04/README.md')
         ]
     
     for post_link, readme_path in posts:
