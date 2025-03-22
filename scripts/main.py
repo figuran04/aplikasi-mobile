@@ -13,15 +13,16 @@ def fetch_medium_posts(feed_url, num_posts=10, category_filter='mobile'):
         categories = [tag.term for tag in entry.tags] if hasattr(entry, 'tags') else []
         if category_filter not in categories:
             continue
-
+        
         title = entry.title
         link = entry.link
+
         summary_html = entry.summary
         soup = BeautifulSoup(summary_html, 'html.parser')
         img_tag = soup.find('img')
         image_url = img_tag['src'] if img_tag else None
-        summary = soup.get_text()[:100] + '...' if len(soup.get_text()) > 100 else soup.get_text()
 
+        summary = soup.get_text()[:100] + '...' if len(soup.get_text()) > 100 else soup.get_text()
         posts.append((title, link, image_url, summary))
 
         if len(posts) >= num_posts:
@@ -67,14 +68,17 @@ def update_readme(posts):
         start_idx = len(readme_content) - 2
         end_idx = len(readme_content) - 1
 
-    updated_content = '\n'
-    for post in new_posts:
-        title, link, image_url, summary = post
-        updated_content = '  <tr>\n'
-        updated_content += f'    <td style="border: 1px solid white; padding: 10px;"><h3><a href="{link}" target="_blank" style="text-decoration: none;">{escape(title)}</a></h3><p>{escape(summary)}</p></td>\n'
-        updated_content += f'    <td style="border: 1px solid white; padding: 10px;"><img src="{image_url}" alt="Post Image" style="width: 100px; height: auto;" /></td>\n'
-        updated_content += '  </tr>\n'
+    old_section = readme_content[start_idx + 1:end_idx]
+    new_section = []
 
+    for title, link, image_url, summary in new_posts:
+        row = '  <tr>\n'
+        row += f'    <td style="border: 1px solid white; padding: 10px;"><h3><a href="{link}" target="_blank" style="text-decoration: none;">{escape(title)}</a></h3><p>{escape(summary)}</p></td>\n'
+        row += f'    <td style="border: 1px solid white; padding: 10px;"><img src="{image_url}" alt="Post Image" style="width: 100px; height: auto;" /></td>\n'
+        row += '  </tr>\n'
+        new_section.append(row)
+
+    updated_content = ''.join(new_section + old_section)
     readme_content = readme_content[:start_idx + 1] + [updated_content] + readme_content[end_idx:]
 
     with open('README.md', 'w', encoding='utf-8') as f:
