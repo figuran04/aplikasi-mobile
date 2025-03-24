@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -27,13 +28,14 @@
             android:hint="Masukkan Teks"
             android:inputType="text|textAutoComplete|textAutoCorrect"
             android:textSize="18sp" />
+
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tampilkan Teks"
+            android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/red"
-            android:layout_gravity="center_horizontal" />
+            android:text="Tampilkan Teks" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
