@@ -9,6 +9,10 @@
     <th style="border: 1px solid white; padding: 10px;">Thumbnail</th>
   </tr>
   <tr>
+    <td style="border: 1px solid white; padding: 10px;"><h3><a href="https://medium.com/@dikaelsaputra/membuat-kalkulator-sederhana-di-android-studio-dengan-java-992adefbcbe8?source=rss-272e0aace4a6------2" target="_blank" style="text-decoration: none;">Membuat Kalkulator Sederhana di Android Studio dengan Java</a></h3><p>Dengan pengaturan UI/UX yang sesuai dan tampilan yang intuitifPada artikel ini, kita akan membuat se...</p></td>
+    <td style="border: 1px solid white; padding: 10px;"><img src="https://cdn-images-1.medium.com/max/768/1*kT5f5QxLjpzg1YxjvOLM9A.png" alt="Post Image" style="width: 100px; height: auto;" /></td>
+  </tr>
+  <tr>
     <td style="border: 1px solid white; padding: 10px;"><h3><a href="https://medium.com/@dikaelsaputra/mengenal-linearlayout-dan-relativelayout-di-android-studio-700bbf5a0b62?source=rss-272e0aace4a6------2" target="_blank" style="text-decoration: none;">Mengenal LinearLayout dan RelativeLayout di Android Studio</a></h3><p>Pengenalan lebih dalam tentang Layout di Android StudioDalam pengembangan aplikasi Android, memilih ...</p></td>
     <td style="border: 1px solid white; padding: 10px;"><img src="https://cdn-images-1.medium.com/max/768/1*5KwiurYGiPovt8VOMhuwoQ.png" alt="Post Image" style="width: 100px; height: auto;" /></td>
   </tr>
