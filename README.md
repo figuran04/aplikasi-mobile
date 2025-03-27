@@ -9,6 +9,10 @@
     <th style="border: 1px solid white; padding: 10px;">Thumbnail</th>
   </tr>
   <tr>
+    <td style="border: 1px solid white; padding: 10px;"><h3><a href="https://medium.com/@dikaelsaputra/desain-aplikasi-di-figma-langkah-tips-layout-046f84ba7ce5?source=rss-272e0aace4a6------2" target="_blank" style="text-decoration: none;">Desain Mockup di Figma: Langkah &amp; Tips Layout</a></h3><p>Panduan Lengkap Figma dengan pendekatan LayoutFigma adalah salah satu alat desain UI/UX paling popul...</p></td>
+    <td style="border: 1px solid white; padding: 10px;"><img src="https://cdn-images-1.medium.com/max/768/1*V6BwB2lxVNJvroUf5kz34Q.png" alt="Post Image" style="width: 100px; height: auto;" /></td>
+  </tr>
+  <tr>
     <td style="border: 1px solid white; padding: 10px;"><h3><a href="https://medium.com/@dikaelsaputra/membuat-kalkulator-sederhana-di-android-studio-dengan-java-992adefbcbe8?source=rss-272e0aace4a6------2" target="_blank" style="text-decoration: none;">Membuat Kalkulator Sederhana di Android Studio dengan Java</a></h3><p>Dengan pengaturan UI/UX yang sesuai dan tampilan yang intuitifPada artikel ini, kita akan membuat se...</p></td>
     <td style="border: 1px solid white; padding: 10px;"><img src="https://cdn-images-1.medium.com/max/768/1*kT5f5QxLjpzg1YxjvOLM9A.png" alt="Post Image" style="width: 100px; height: auto;" /></td>
   </tr>
