@@ -105,8 +105,9 @@ if __name__ == "__main__":
         ("https://medium.com/@dikaelsaputra/arsitektur-android-eb07231e3546?source=rss-272e0aace4a6------2", 'pertemuan-02/README.md'),
         ("https://medium.com/@dikaelsaputra/instalasi-figma-alat-desain-ui-ux-d2d3e5bade78?source=rss-272e0aace4a6------2", 'pertemuan-03/README.md'),
         ("https://medium.com/@dikaelsaputra/desain-ui-aplikasi-android-di-android-studio-9d8edc4abec5?source=rss-272e0aace4a6------2", 'pertemuan-04/README.md'),
-        ("https://medium.com/@dikaelsaputra/mengenal-linearlayout-dan-relativelayout-di-android-studio-700bbf5a0b62?source=rss-272e0aace4a6------2", 'pertemuan-05/README.md'),
-        ("https://medium.com/@dikaelsaputra/membuat-kalkulator-sederhana-di-android-studio-dengan-java-992adefbcbe8?source=rss-272e0aace4a6------2", 'pertemuan-06/README.md')
+        ("https://medium.com/@dikaelsaputra/desain-aplikasi-di-figma-langkah-tips-layout-046f84ba7ce5?source=rss-272e0aace4a6------2", 'pertemuan-05/README.md'),
+        ("https://medium.com/@dikaelsaputra/mengenal-linearlayout-dan-relativelayout-di-android-studio-700bbf5a0b62?source=rss-272e0aace4a6------2", 'pertemuan-06/README.md'),
+        ("https://medium.com/@dikaelsaputra/membuat-kalkulator-sederhana-di-android-studio-dengan-java-992adefbcbe8?source=rss-272e0aace4a6------2", 'pertemuan-07/README.md')
         ]
     
     for post_link, readme_path in posts:
