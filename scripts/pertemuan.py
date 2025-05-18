@@ -13,7 +13,7 @@ os.makedirs(output_folder, exist_ok=True)
 
 def fetch_medium_post_summary(feed_url, post_link):
     feed = feedparser.parse(feed_url)
-    
+
     for entry in feed.entries:
         if entry.link == post_link:
             return entry.summary  # Mengembalikan summary jika ditemukan
@@ -76,25 +76,25 @@ def create_post_image(post_data, index):
     draw = ImageDraw.Draw(image)
     font_size = 62
     font = ImageFont.truetype('assets/Helvetica-Bold.ttf', font_size)
-    
+
     if post_data[0]:
         try:
             response = requests.get(post_data[0])
             img = Image.open(BytesIO(response.content))
-            img.thumbnail((400, 400))  
+            img.thumbnail((400, 400))
             image.paste(img, (0, 0))
         except Exception as e:
             print(f"Error loading image: {e}")
-     
+
     text_claps = [f"{post_data[2]}", f"{post_data[1]}"]
-    line_height = 10  
-    text_x = 0       
-    text_y = 415      
-    
+    line_height = 10
+    text_x = 0
+    text_y = 415
+
     for line in text_claps:
         draw.text((text_x, text_y), line, font=font, fill='black')
-        text_y += font_size + line_height  
-    
+        text_y += font_size + line_height
+
     output_path = os.path.join(output_folder, f'post_{index + 1}.png')
     image.save(output_path, "PNG")
 
@@ -107,9 +107,11 @@ if __name__ == "__main__":
         ("https://medium.com/@dikaelsaputra/desain-ui-aplikasi-android-di-android-studio-9d8edc4abec5?source=rss-272e0aace4a6------2", 'pertemuan-04/README.md'),
         ("https://medium.com/@dikaelsaputra/desain-aplikasi-di-figma-langkah-tips-layout-046f84ba7ce5?source=rss-272e0aace4a6------2", 'pertemuan-05/README.md'),
         ("https://medium.com/@dikaelsaputra/mengenal-linearlayout-dan-relativelayout-di-android-studio-700bbf5a0b62?source=rss-272e0aace4a6------2", 'pertemuan-06/README.md'),
-        ("https://medium.com/@dikaelsaputra/membuat-kalkulator-sederhana-di-android-studio-dengan-java-992adefbcbe8?source=rss-272e0aace4a6------2", 'pertemuan-07/README.md')
+        ("https://medium.com/@dikaelsaputra/membuat-kalkulator-sederhana-di-android-studio-dengan-java-992adefbcbe8?source=rss-272e0aace4a6------2", 'pertemuan-07/README.md'),
+        ("https://medium.com/@dikaelsaputra/pembuatan-aplikasi-mobile-input-nama-di-android-studio-9728e80b53c7?source=rss-272e0aace4a6------2", 'pertemuan-08/README.md'),
+        ("https://medium.com/@dikaelsaputra/pembuatan-listview-sederhana-di-android-studio-99a1319148e2?source=rss-272e0aace4a6------2", 'pertemuan-09/README.md')
         ]
-    
+
     for post_link, readme_path in posts:
         summary = fetch_medium_post_summary(FEED_URL, post_link)
         update_readme(summary, readme_path, post_link)
