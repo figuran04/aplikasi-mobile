@@ -9,6 +9,10 @@
     <th style="border: 1px solid white; padding: 10px;">Thumbnail</th>
   </tr>
   <tr>
+    <td style="border: 1px solid white; padding: 10px;"><h3><a href="https://medium.com/@dikaelsaputra/implementasi-aplikasi-crud-berbasis-file-lokal-di-android-studio-dengan-java-52f31eef93ca?source=rss-272e0aace4a6------2" target="_blank" style="text-decoration: none;">Implementasi Aplikasi Crud Berbasis File Lokal di Android Studio dengan Java</a></h3><p>Studi Kasus: Aplikasi Save FileDalam pengembangan aplikasi Android, kebutuhan akan penyimpanan data ...</p></td>
+    <td style="border: 1px solid white; padding: 10px;"><img src="https://cdn-images-1.medium.com/max/768/1*ISDClnRZuKUAsYrqmIXA3w.png" alt="Post Image" style="width: 100px; height: auto;" /></td>
+  </tr>
+  <tr>
     <td style="border: 1px solid white; padding: 10px;"><h3><a href="https://medium.com/@dikaelsaputra/pembuatan-listview-sederhana-di-android-studio-99a1319148e2?source=rss-272e0aace4a6------2" target="_blank" style="text-decoration: none;">Pembuatan ListView Sederhana di Android Studio</a></h3><p>ListView Sederhana Menggunakan JavaPada artikel kali ini, kita akan belajar membuat aplikasi Android...</p></td>
     <td style="border: 1px solid white; padding: 10px;"><img src="https://cdn-images-1.medium.com/max/767/1*PzOwGRoNo-g5l3G7T0Ob2g.png" alt="Post Image" style="width: 100px; height: auto;" /></td>
   </tr>
@@ -31,10 +35,6 @@
   <tr>
     <td style="border: 1px solid white; padding: 10px;"><h3><a href="https://medium.com/@dikaelsaputra/desain-ui-aplikasi-android-di-android-studio-9d8edc4abec5?source=rss-272e0aace4a6------2" target="_blank" style="text-decoration: none;">Desain UI Aplikasi Android di Android Studio</a></h3><p>Dasar-dasar struktur proyek, mendesain UI, dan interaksi melalui kode JavaPhoto by Shamsudeen Adedok...</p></td>
     <td style="border: 1px solid white; padding: 10px;"><img src="https://cdn-images-1.medium.com/max/1024/0*_nsZFw0H_SK1vo_b" alt="Post Image" style="width: 100px; height: auto;" /></td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid white; padding: 10px;"><h3><a href="https://medium.com/@dikaelsaputra/instalasi-figma-alat-desain-ui-ux-d2d3e5bade78?source=rss-272e0aace4a6------2" target="_blank" style="text-decoration: none;">Instalasi Figma Alat Desain UI/UX</a></h3><p>Mengunduh, Menginstal, dan Membuat Proyek Pertama di FigmaPhoto by Zac Wolff on Unsplash1. Mengunduh...</p></td>
-    <td style="border: 1px solid white; padding: 10px;"><img src="https://cdn-images-1.medium.com/max/768/1*bO7u7lawFlDbUGCQ22vWTQ.png" alt="Post Image" style="width: 100px; height: auto;" /></td>
   </tr>
 </table>
 </div>
